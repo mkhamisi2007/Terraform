@@ -1,0 +1,14 @@
+terraform init
+terraform plan
+terraform apply
+terraform apply --auto-approve
+terraform destroy
+terraform destroy --auto-approve
+-----
+terraform plan -out ts.plan
+terraform apply ts.plan
+-----
+terraform workspace new staging
+terraform workspace list
+terraform workspace select staging
+terraform plan -generate-config-out=generated.tf
