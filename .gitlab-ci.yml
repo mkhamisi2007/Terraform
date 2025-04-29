@@ -1,0 +1,11 @@
+stages:
+  - deploy
+
+deploy_ansible:
+  stage: deploy
+  image: python:3.10
+  script:
+    - pip install ansible
+    - ansible-playbook -i inventory playbook.yml
+  only:
+    - main  # or the branch where you want it to run
