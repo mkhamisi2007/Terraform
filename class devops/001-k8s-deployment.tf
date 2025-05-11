@@ -10,7 +10,7 @@ resource "kubernetes_deployment" "example" {
       app = "example"
     }
   }
-
+ 
   spec {
     replicas = 3
 
